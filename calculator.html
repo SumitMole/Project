@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    body{
+        background-image: url(./pexels-miguel-á-padriñán-255377.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #parent{
+        height: 400px;
+        width: 300px;
+        border: 1px solid;
+        margin: 0 auto;
+        margin-top: 95px;
+        border-radius: 20px;
+        box-shadow: 6px 6px 9px;
+        background-image: url(./pexels-visax-12815472.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+    }
+    input{
+        width: 250px;
+        height: 80px;
+        font-size: 2rem;
+        padding: 1rem;
+        border: none;
+        text-align: right;
+        margin-left: 9px;
+        margin-top: 10px;
+        background-color: slategrey;
+        color: antiquewhite;
+        border-radius: 10px;
+
+    }
+    .child1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .child2{
+        background-color: grey; 
+        
+    }
+    .child3{
+        background-image: linear-gradient(#00203F,#ADEFD1,#00203F);
+    }
+    .child4{
+        background-color: #CD8C8C;
+    }
+    .child5{
+        background-color:#A95EA3;
+    }
+
+    button{
+        flex: 0 0 22%;
+        margin: 5px 0;
+        border: 1px solid;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }   
+ </style>
+</head>
+<body>
+<div id="parent">
+    <input id="screen" type="text" placeholder="0">
+    <br>
+    <div class="child1">
+    <button class="child2" onclick="show('1')">1</button>
+    <button class="child2" onclick="show('2')">2</button>
+    <button class="child2" onclick="show('3')">3</button>
+    <button class="child2" onclick="show('4')">4</button>
+    <button class="child2" onclick="show('5')">5</button>
+    <button class="child2" onclick="show('6')">6</button>
+    <button class="child2" onclick="show('7')">7</button>
+    <button class="child2" onclick="show('8')">8</button>
+    <button class="child2" onclick="show('9')">9</button>
+    <button class="child2" onclick="show('0')">0</button>
+    <!-- <button class="child2" onclick="show('00')">00</button> -->
+    <button class="child4" onclick="cal('=')">=</button>
+    <button class="child5" onclick="allclear()">c</button>  
+    <button class="child3" onclick="show('/')">/</button>
+    <button class="child3" onclick="show('*')">*</button>
+    <!-- <button class="child3" onclick="show('.')">.</button> -->
+    <button class="child3" onclick="show('+')">+</button>
+    <button class="child3" onclick="show('-')">-</button>
+    </div>
+</div>
+<script>
+    let display=document.getElementById("screen")
+    function allclear() {
+        display.value=""
+    }
+    function show(n) {
+        display.value=display.value+n
+    }
+     function cal() {
+        display.value=eval(display.value)
+    }
+</script>
+</body>
+</html>
